@@ -1,0 +1,44 @@
+﻿  Reading Qt configuration (D:/Qt/5.15.2/msvc2019/bin/qmake)
+  appevent.cpp
+  env.cpp
+  featureLayer.cpp
+  geoCollection.cpp
+  geofeaturelayerproperty.cpp
+  geoMath.cpp
+  Geometry.cpp
+  geoPoint.cpp
+  geoPolygon.cpp
+  glcall.cpp
+  gridindex.cpp
+  indexbuffer.cpp
+D:\面向对象课设\QtGeometry\QtGeometry\logger.h(2,10): fatal error C1083: 无法打开包括文件: “spdlog/spdlog.h”: No such file or directory (编译源文件 glcall.cpp)
+  lineRing.cpp
+  lineString.cpp
+D:\面向对象课设\QtGeometry\QtGeometry\shader.h(4,10): fatal error C1083: 无法打开包括文件: “glm/glm.hpp”: No such file or directory (编译源文件 env.cpp)
+  map.cpp
+  multiLineString.cpp
+  multiPoint.cpp
+  multiPolygon.cpp
+  openglfeaturedescriptor.cpp
+  openglrasterdescriptor.cpp
+  operation.cpp
+  operationlist.cpp
+  rasterBand.cpp
+  rasterData.cpp
+  rasterLayer.cpp
+  renderer.cpp
+  shader.cpp
+  texture.cpp
+D:\面向对象课设\QtGeometry\QtGeometry\logger.h(2,10): fatal error C1083: 无法打开包括文件: “spdlog/spdlog.h”: No such file or directory (编译源文件 map.cpp)
+  utility.cpp
+  feature.cpp
+  vertexarray.cpp
+  vertexbuffer.cpp
+D:\面向对象课设\QtGeometry\QtGeometry\shader.h(4,10): fatal error C1083: 无法打开包括文件: “glm/glm.hpp”: No such file or directory (编译源文件 renderer.cpp)
+  QtGeometry.cpp
+  main.cpp
+D:\面向对象课设\QtGeometry\QtGeometry\shader.h(4,10): fatal error C1083: 无法打开包括文件: “glm/glm.hpp”: No such file or directory (编译源文件 shader.cpp)
+D:\面向对象课设\QtGeometry\QtGeometry\shader.h(4,10): fatal error C1083: 无法打开包括文件: “glm/glm.hpp”: No such file or directory (编译源文件 rasterBand.cpp)
+D:\面向对象课设\QtGeometry\QtGeometry\vertexbufferlayout.h(18): warning C4715: “VertexBufferElement::GetSizeOfType”: 不是所有的控件路径都返回值
+D:\面向对象课设\QtGeometry\QtGeometry\shader.h(4,10): fatal error C1083: 无法打开包括文件: “glm/glm.hpp”: No such file or directory (编译源文件 operationlist.cpp)
+D:\面向对象课设\QtGeometry\QtGeometry\shader.h(4,10): fatal error C1083: 无法打开包括文件: “glm/glm.hpp”: No such file or directory (编译源文件 feature.cpp)

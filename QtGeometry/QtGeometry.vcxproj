@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{12ED619C-7C8D-4B75-A072-7CF11785DBB9}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
+    <QtInstall>msvc2019</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
+    <QtInstall>msvc2019</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <IncludePath>D:\面向对象课设\QtGeometry\include\GL;D:\面向对象课设\QtGeometry\include\spdlog;D:\面向对象课设\QtGeometry\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\面向对象课设\QtGeometry\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>glew32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\面向对象课设\QtGeometry\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="appevent.cpp" />
+    <ClCompile Include="env.cpp" />
+    <ClCompile Include="featureLayer.cpp" />
+    <ClCompile Include="geoCollection.cpp" />
+    <ClCompile Include="geofeaturelayerproperty.cpp" />
+    <ClCompile Include="geoMath.cpp" />
+    <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="geoPoint.cpp" />
+    <ClCompile Include="geoPolygon.cpp" />
+    <ClCompile Include="glcall.cpp" />
+    <ClCompile Include="gridindex.cpp" />
+    <ClCompile Include="indexbuffer.cpp" />
+    <ClCompile Include="lineRing.cpp" />
+    <ClCompile Include="lineString.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="multiLineString.cpp" />
+    <ClCompile Include="multiPoint.cpp" />
+    <ClCompile Include="multiPolygon.cpp" />
+    <ClCompile Include="openglfeaturedescriptor.cpp" />
+    <ClCompile Include="openglrasterdescriptor.cpp" />
+    <ClCompile Include="operation.cpp" />
+    <ClCompile Include="operationlist.cpp" />
+    <ClCompile Include="rasterBand.cpp" />
+    <ClCompile Include="rasterData.cpp" />
+    <ClCompile Include="rasterLayer.cpp" />
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="texture.cpp" />
+    <ClCompile Include="utility.cpp" />
+    <ClCompile Include="feature.cpp" />
+    <ClCompile Include="vertexarray.cpp" />
+    <ClCompile Include="vertexbuffer.cpp" />
+    <QtRcc Include="QtGeometry.qrc" />
+    <QtUic Include="QtGeometry.ui" />
+    <QtMoc Include="QtGeometry.h" />
+    <ClCompile Include="QtGeometry.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vertexbufferlayout.h" />
+    <QtMoc Include="appevent.h" />
+    <ClInclude Include="env.h" />
+    <ClInclude Include="feature.h" />
+    <ClInclude Include="field.h" />
+    <ClInclude Include="geofeaturelayerproperty.h" />
+    <ClInclude Include="geoMath.h" />
+    <ClInclude Include="Geometry.h" />
+    <ClInclude Include="rasterData.h" />
+    <ClInclude Include="georasterlayerproperty.h" />
+    <ClInclude Include="geo_base.hpp" />
+    <ClInclude Include="glcall.h" />
+    <ClInclude Include="grid.h" />
+    <ClInclude Include="gridindex.h" />
+    <ClInclude Include="indexbuffer.h" />
+    <ClInclude Include="layer.h" />
+    <ClInclude Include="logger.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="mapProperty.h" />
+    <ClInclude Include="memoryleakdetect.h" />
+    <ClInclude Include="openglfeaturedescriptor.h" />
+    <ClInclude Include="openglrasterdescriptor.h" />
+    <QtMoc Include="operation.h" />
+    <ClInclude Include="operationlist.h" />
+    <ClInclude Include="rasterBand.h" />
+    <ClInclude Include="rasterLayer.h" />
+    <ClInclude Include="renderer.h" />
+    <ClInclude Include="shader.h" />
+    <ClInclude Include="spatialindex.h" />
+    <ClInclude Include="texture.h" />
+    <ClInclude Include="utility.h" />
+    <ClInclude Include="vertexarray.h" />
+    <ClInclude Include="vertexbuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets" Condition="Exists('..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets')" />
+    <Import Project="..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets" Condition="Exists('..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets'))" />
+  </Target>
+</Project>
